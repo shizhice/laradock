@@ -717,7 +717,8 @@ services:
     redis-sentinel:
       build: ./redis-sentinel
       ports:
-        - "${REDIS_SENTINEL_PORT_RANGE}:7100-7102"
+        - "${REDIS_SENTINEL_HOST_PORT_RANGE}:7100-7102"
+        - "${REDIS_SENTINEL_PORT_RANGE}:17100-17102"
       networks:
         - backend
 
